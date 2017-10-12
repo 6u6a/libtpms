@@ -30,6 +30,9 @@ configure using:
 
 ./configure --prefix=/usr
 
+If you want to compile libtpms with tpm2 enabled, then using:
+./configure --with-openssl --enable-debug --with-tpm2
+
 For more details on configure options, run "./configure -h".
 
 Building libtpms can be done using:
