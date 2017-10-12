@@ -234,11 +234,18 @@ TPM_RESULT TPM2_GetTPMProperty(enum TPMLIB_TPMProperty prop,
     case  TPMPROP_TPM_MIN_COUNTERS:
     case  TPMPROP_TPM_NUM_FAMILY_TABLE_ENTRY_MIN:
     case  TPMPROP_TPM_NUM_DELEGATE_TABLE_ENTRY_MIN:
+    //changed by 6u6a
     case  TPMPROP_TPM_SPACE_SAFETY_MARGIN:
+        *result = 0;
+        break;
     case  TPMPROP_TPM_MAX_NV_SPACE:
+        *result = NV_MEMORY_SIZE;
+        break;
     case  TPMPROP_TPM_MAX_SAVESTATE_SPACE:
     case  TPMPROP_TPM_MAX_VOLATILESTATE_SPACE:
-
+        *result = 0;
+        break; 
+    //end of change
     default:
         return TPM_FAIL;
     }
