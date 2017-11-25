@@ -20,6 +20,9 @@ The libtpms library can be built using the steps:
 Building libtpms:
 -----------------
 
+Related pacages install:
+make m4 automake autoconf libtool openssl libssl libssl-dev
+
 The configure script needs to be run first, and can be done using:
 
 ./configure
